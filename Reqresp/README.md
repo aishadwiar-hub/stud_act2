@@ -1,6 +1,6 @@
 # Request and Response (TCP)
 
-Model Request/Response adalah pola komunikasi standar antara client dan server. Dimana server menunggu permintaan dari client, sementara client mengirimkan pesan (request). Server memproses dan membalas pesan (response) dan Protokol TCP digunakan karena menjamin pengiriman data secara andal dan berurutan. Model ini banyak digunakan pada aplikasi web, API, dan sistem terdistribusi untuk memastikan setiap permintaan mendapat balasan
+Model Request/Response adalah pola komunikasi standar antara client dan server. Dimana server menunggu permintaan dari client, sementara client mengirimkan pesan (request). Server memproses dan membalas pesan (response) dan Protokol TCP digunakan karena menjamin pengiriman data secara andal dan berurutan. Model ini banyak digunakan pada aplikasi web, API, dan sistem terdistribusi untuk memastikan setiap permintaan mendapat balasan.
 
 ## 1. Menjalankan Container
 
