@@ -7,6 +7,8 @@ MQTT adalah protokol komunikasi ringan berbasis publish/subscribe yang umum dipa
 ```
 docker compose -f compose/mqtt.yml up -d
 ```
+<img src="https://i.imgur.com/hKT2w5n.png">
+
 Menyiapkan lingkungan percobaan dengan menyalakan semua container sesuai file `mqtt.yml`, termasuk broker MQTT.
 
 ## 2. Menjalankan Subscriber
@@ -14,6 +16,7 @@ Menyiapkan lingkungan percobaan dengan menyalakan semua container sesuai file `m
 ```
 docker compose -f compose/mqtt.yml exec mqtt-sub python sub.py
 ```
+<img src="https://imgur.com/eM4gCef.png">
 Menjalankan script subscriber di dalam container `mqtt-sub`.
 Subscriber ini akan tersambung ke broker dan berlangganan pada topik, sehingga siap menerima pesan dari publisher.
 
@@ -22,6 +25,7 @@ Subscriber ini akan tersambung ke broker dan berlangganan pada topik, sehingga s
 ```
 docker compose -f compose/mqtt.yml exec mqtt-pub python pub.py
 ```
+<img src="https://imgur.com/ssz63zO.png">
 Menjalankan script publisher di dalam container `mqtt-pub`.
 Publisher akan mengirim data (contohnya suhu) ke topik yang sudah dilanggan oleh subscriber.
 Hasilnya akan melihat subscriber menerima pesan secara real-time.
@@ -31,6 +35,7 @@ Hasilnya akan melihat subscriber menerima pesan secara real-time.
 ```
 ip a
 ```
+<img src="https://imgur.com/JtISZtG.png">
 Menampilkan daftar network interface di sistem. Kemudian mencari interface br- atau bridge network Docker yang kemudian akan dipakai untuk memantau trafik pada langkah berikutnya.
 
 ## 5. Menangkap Lalu Lintas Jaringan
@@ -38,6 +43,9 @@ Menampilkan daftar network interface di sistem. Kemudian mencari interface br- a
 ```
 sudo tcpdump -nvi br-ca652d60ceba -w test.pcap
 ```
+<img src="https://imgur.com/GJeKNwO.png">
+
+<img src="https://imgur.com/4mfVQs5.png">
 Menangkap semua paket yang melewati bridge tersebut. File hasil tangkapan disimpan sebagai test.pcap dan bisa dibuka dengan Wireshark untuk menganalisis protokol MQTT (CONNECT, SUBSCRIBE, PUBLISH, dsb).
 
 ## 6. Menghentinkan Container
@@ -45,4 +53,5 @@ Menangkap semua paket yang melewati bridge tersebut. File hasil tangkapan disimp
 ```
 docker compose -f compose/mqtt.yml down
 ```
+<img src="https://imgur.com/u8fLzOP.png">
 Menonaktifkan semua container yang sudah dijalankan dan membersihkan resource. Hal ini penting supaya tidak ada container yang terus berjalan dan mengganggu percobaan selanjutnya.
