@@ -14,7 +14,7 @@ def server_program():
     server_socket.bind(('0.0.0.0', 2222))  
     
     server_socket.listen(1)
-    print("Server listening on 0.0.0.0:2222")
+    print("Server listening on 0.0.0.0:7171")
     conn, address = server_socket.accept()  
     print("Connection from:", address)
     
