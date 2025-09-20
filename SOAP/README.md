@@ -42,8 +42,6 @@ sudo tcpdump -nvi br-ca652d60ceba -w soap2.pcap
 
 Menangkap paket-paket komunikasi SOAP yang melewati bridge Docker. Terminal menampilkan status `listening`, dan paket mulai direkam.
 
-<img src="https://imgur.com/A88PdlE.png">
-
 ## 5. Menjalankan Client
 
 ```
@@ -59,7 +57,7 @@ Menjalankan client yang mengirim request ke server SOAP. Client menampilkan “H
 
 <img src="https://imgur.com/k79JFCI.png">
 
-# 6. Menghentikan Container
+## 6. Menghentikan Container
 
 ```
 docker compose -f compose/soap.yml down
