@@ -1,6 +1,6 @@
 # ZMQ: ZeroMQ
 
-ZeroMQ (ZMQ) adalah library messaging yang memungkinkan komunikasi antar-proses atau antar-mesin dengan performa tinggi.
+ZeroMQ (ZMQ) adalah library messaging yang melakukan komunikasi antar-proses atau antar-mesin dengan performa tinggi.
 ZeroMQ mendukung banyak pola komunikasi, seperti:
 - Request/Reply (REQ/REP) → seperti client-server biasa.
 - Publish/Subscribe (PUB/SUB) → broadcast data ke banyak subscriber.

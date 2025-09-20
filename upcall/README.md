@@ -1,6 +1,6 @@
 # Upcall
 
-Upcall adalah mekanisme komunikasi di mana server dapat “memanggil kembali” (callback) fungsi atau memberikan respons secara asinkron setelah menerima permintaan dari client. Model ini memungkinkan komunikasi dua arah di mana server bisa mengirimkan notifikasi atau hasil pemrosesan tanpa harus menunggu request baru dari client.
+Upcall adalah mekanisme komunikasi di mana server dapat “memanggil kembali” (callback) fungsi atau memberikan respons secara asinkron setelah menerima permintaan dari client. Model ini komunikasi dua arah di mana server bisa mengirimkan notifikasi atau hasil pemrosesan tanpa harus menunggu request baru dari client.
 
 ## 1. Menjalankan Container
 
